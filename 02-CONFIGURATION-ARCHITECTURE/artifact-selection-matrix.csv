@@ -1,0 +1,12 @@
+Artifact,Typical use,Default status,Create when,Avoid when,Approval
+Root CLAUDE.md,Project identity and essential shared instructions,Required,Every configured repository,Not applicable,Maintainer review
+Nested CLAUDE.md,Directory-specific context,Conditional,Subtree needs distinct local guidance,Root instructions already cover it,Maintainer review
+.claude/rules/*.md,Modular reusable/path-scoped rules,Conditional,Rule has distinct scope or topic,One short root instruction suffices,Maintainer review
+.claude/settings.json,Shared project settings,Conditional,Validated team-wide setting is needed,No shared setting is needed,Review; security review for permissions
+.claude/settings.local.json,Personal local overrides,Do not generate,User explicitly requests local setup,Shared template or tracked artifact,User only
+.claude/agents/*.md,Specialized subagent definitions,Conditional,Distinct delegated role improves repeatable work,Role duplicates main agent or adds no value,Maintainer review
+.claude/skills/*/SKILL.md,Reusable task capability/workflow,Conditional,Repeatable workflow merits on-demand instructions,One-off task or simple rule,Maintainer review
+.claude/commands/*,Reusable slash command files where supported,Conditional,Team benefits from stable named command,Skill mechanism is more appropriate or command is one-off,Maintainer review
+Hooks in settings,Event-driven automation,High caution,Deterministic check/action is justified and tested,Action is risky, opaque, or unnecessary,Explicit human approval
+MCP configuration,External tool/data integration,High caution,Project workflow needs an approved external capability,Native tools suffice or trust is unclear,Explicit human/security approval
+Plugin/marketplace config,Extend Claude with packaged capabilities,High caution,Specific approved plugin is needed,No validated need or source trust,Explicit human/security approval

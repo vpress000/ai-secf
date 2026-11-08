@@ -1,0 +1,23 @@
+framework:
+  name: AI-SECF
+  version: 1.0.0
+target:
+  repository: ""
+  claude_code_version_checked: ""
+  checked_on: ""
+artifacts:
+  - path: CLAUDE.md
+    type: root-instructions
+    status: planned
+    ownership: project
+    scope: repository
+    purpose: ""
+    source_evidence: []
+    dependencies: []
+    approval: pending
+    validation: not-run
+decisions: []
+known_gaps: []
+maintenance:
+  last_reviewed: ""
+  review_triggers: []
